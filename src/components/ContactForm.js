@@ -1,8 +1,31 @@
+import emailjs from "emailjs-com";
 import React from "react";
-import './ContactForm.css'
+import './ContactForm.css';
 
 const ContactSection = () => {
-    return (
+  const handleEmailSubmit = (event) => {
+    event.preventDefault();
+
+    emailjs.sendForm(
+      "service_xuzwmzb", 
+      "template_9ju698c", 
+      event.target,
+      "FJVzrb4_3M5vuIRd5" 
+
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+    })
+    .catch((error) => {
+      console.error("Error sending message.", error);
+      alert("Failed to send message. Please try again.");
+    });
+
+    event.target.reset();
+  }
+
+
+   return (
       <section id="contact">
         <div className="cs-container">
           <div className="cs-form-group">
@@ -11,7 +34,7 @@ const ContactSection = () => {
               <h2 className="cs-title">Book An Appointment</h2>
             </div>
             {/* Form */}
-            <form className="cs-form" id="cs-form" name="Contact Form" method="post">
+            <form className="cs-form" id="cs-form" onSubmit={handleEmailSubmit}>
               <label className="cs-label">
                 Name *
                 <input
@@ -20,7 +43,7 @@ const ContactSection = () => {
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="John Doe"
+                  placeholder="Name"
                 />
               </label>
               <label className="cs-label cs-email">
@@ -31,7 +54,7 @@ const ContactSection = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="johndoe@gmail.com"
+                  placeholder="Email"
                 />
               </label>
               <label className="cs-label cs-phone">
@@ -42,7 +65,7 @@ const ContactSection = () => {
                   type="phone"
                   id="phone"
                   name="phone"
-                  placeholder="+1 (206) 987-6543"
+                  placeholder="Phone"
                 />
               </label>
               <label className="cs-label">
@@ -50,9 +73,9 @@ const ContactSection = () => {
                 <textarea
                   className="cs-input cs-textarea"
                   required
-                  name="Message"
+                  name="message"
                   id="message"
-                  placeholder="Hello, I am interested..."
+                  placeholder="Write message..."
                 ></textarea>
               </label>
               <button className="cs-button-solid cs-submit" type="submit">
@@ -123,8 +146,9 @@ const ContactSection = () => {
           ))}
         </div>
       </section>
-    );
-  };
-  
+   )
+
+  }
+
   export default ContactSection;
   

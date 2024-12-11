@@ -36,7 +36,7 @@
         letter-spacing: 0.1em;
         font-weight: 700;
         color: var(--primary);
-        margin-bottom: 0.25rem;
+        margin-bottom: -40px;
         display: block;
     }
     #why-choose-441 .cs-title {
@@ -45,12 +45,12 @@
         line-height: 1.2em;
         text-align: inherit;
         max-width: 43.75rem;
-        margin: 0 0 1rem 0;
+        margin-bottom: -20px;
         color: var(--headerColor);
         position: relative;
     }
     #why-choose-441 .cs-text {
-        font-size: var(--bodyFontSize);
+        font-size: 1.3rem;
         line-height: 1.5em;
         text-align: inherit;
         width: 100%;

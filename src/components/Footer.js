@@ -1,7 +1,29 @@
+import emailjs from "emailjs-com";
 import React from 'react';
-import './Footer.css'
+import './Footer.css';
 
 const ContactSectionFooter = () => {
+
+  const handleEmailSubmit = (event) => {
+    event.preventDefault();
+
+    emailjs.sendForm(
+      "service_xuzwmzb", 
+      "template_9ju698c", 
+      event.target,
+      "FJVzrb4_3M5vuIRd5" 
+
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+    })
+    .catch((error) => {
+      console.error("Error sending message.", error);
+      alert("Failed to send message. Please try again.");
+    });
+
+    event.target.reset();
+  }
   return (
     <section id="contact-1392">
       <div className="cs-container">
@@ -70,7 +92,7 @@ const ContactSectionFooter = () => {
             </li>
           </ul>
         </div>
-        <form className="cs-form" id="cs-form-1392" name="Contact Form" method="post">
+        <form className="cs-form" onSubmit={handleEmailSubmit}>
           <h3 className="cs-h3">Make Appointment</h3>
           <label className="cs-label">
             Name
@@ -227,3 +249,4 @@ const Footer = () => {
 }
 
 export { ContactSectionFooter, Footer };
+

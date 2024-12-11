@@ -16,7 +16,7 @@ const ContentGroups = () => {
         </div>
         <div className="cs-wrapper">
           <p className="cs-text">
-            This is my own business, I ensure that your pool stays in the best possible condition all year round. Whether it's routine maintenance, cleaning, or repair, I am here to keep your pool sparkling and ready for you to enjoy. My expertise ensures that your pool operates efficiently, safely, and looks stunning every time you dive in.
+            As a proud business owner, I ensure that your pool stays in the best possible condition all year round. Whether it's routine maintenance, cleaning, or repair, I am here to keep your pool sparkling and ready for you to enjoy. My expertise ensures that your pool operates efficiently, safely, and looks stunning every time you dive in.
           </p>
           <ul className="cs-ul">
             {[

@@ -31,7 +31,7 @@
     }
     #cs-content .cs-title {
       margin: 0;
-      font-size: 2.7rem;
+      font-size: 2.9rem;
       /* 16px - 32px */
       margin-bottom: clamp(1rem, 3vw, 2rem);
     }
@@ -40,7 +40,7 @@
     }
     #cs-content .cs-text {
       margin: 0 0 2rem 0;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
     #cs-content .cs-button-solid {
       font-size: 1rem;
