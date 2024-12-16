@@ -1,11 +1,15 @@
 import React from "react";
-import './LandingPage.css';
-import herogif from '../images/herogif.gif';
 import heroimagemobile from '../images/heroimage-m.webp';
+import heroimage from '../images/heroimage.webp';
 import poolservice1 from '../images/poolservice1.webp';
 import poolservice2 from '../images/poolservice2.webp';
 import poolservice3 from '../images/poolservice3.webp';
 import poolservice4 from '../images/poolservice4.webp';
+import ContentGroups from './ContentGroups';
+import { ContactSectionFooter } from './Footer';
+import './LandingPage.css';
+import Reviews from './Reviews';
+import WhyUs from './WhyUs';
 
 const LandingPage = () => {
   return (
@@ -28,15 +32,15 @@ const LandingPage = () => {
         <picture className="cs-background">
           <source
             media="(max-width: 800px)"
-            srcSet={herogif}
+            srcSet={heroimagemobile}
           />
           <source
             media="(min-width: 601px)"
-            srcSet={herogif}
+            srcSet={heroimage}
           />
           <img
             decoding="async"
-            src={herogif}
+            src={heroimage}
             alt="healthcare professionals"
             width="1920"
             height="746"
@@ -113,7 +117,13 @@ const LandingPage = () => {
           </ul>
         </div>
       </section>
+      <ContentGroups />
+      <WhyUs />
+      <Reviews />
+      <ContactSectionFooter />
     </>
+
+    
   );
 };
 

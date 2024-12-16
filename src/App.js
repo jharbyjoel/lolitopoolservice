@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import ContentGroups from './components/ContentGroups';
-import { ContactSectionFooter, Footer } from './components/Footer';
+import AboutPage from './components/AboutPage';
+import Appointment from './components/Appointment';
+import { Footer } from './components/Footer';
 import LandingPage from './components/LandingPage';
 import NavBar from './components/Navbar';
-import Reviews from './components/Reviews';
-import WhyUs from './components/WhyUs';
+import ServicesPage from './components/ServicesPage';
 
 
 function App() {
@@ -16,14 +16,14 @@ function App() {
         <>
           <NavBar /> {/* Show Navbar after login */}
           <Routes>
-          <Route path="/" element={<LandingPage />} /> {/* Home page */}
+          <Route path="/home" element={<LandingPage />} /> {/* Home page */}
+          <Route path="/about" element={<AboutPage />} /> {/* Home page */}
+          <Route path="/services" element={<ServicesPage />} /> {/* Home page */}
+          <Route path='/BookAnAppointment' element={<Appointment />} />
+          <Route path='/contact-us' element={<Appointment />} />
             {/* Add other routes here */}
           </Routes>
-          <ContentGroups />
-          <WhyUs />
-          <Reviews /> 
-          <ContactSectionFooter />
-
+         
           <Footer />
         
         </>
