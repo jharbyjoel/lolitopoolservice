@@ -5,16 +5,16 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #cs-content {
-      width: 100%;
+      width: 85%;
       max-width: 80rem;
       margin: auto;
-      margin-top: 10%;
       margin-bottom: 5%;
       display: flex;
       flex-direction: column;
       align-items: center;
       /* 48px - 64px */
       gap: clamp(3rem, 6.5vw, 4rem);
+      
     }
     #cs-content .cs-content {
       /* set text align to center if content needs to be center aligned */
@@ -31,7 +31,6 @@
     }
     #cs-content .cs-title {
       margin: 0;
-      font-size: 2.9rem;
       /* 16px - 32px */
       margin-bottom: clamp(1rem, 3vw, 2rem);
     }
@@ -40,7 +39,7 @@
     }
     #cs-content .cs-text {
       margin: 0 0 2rem 0;
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
     #cs-content .cs-button-solid {
       font-size: 1rem;

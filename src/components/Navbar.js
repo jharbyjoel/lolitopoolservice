@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/Lolito.webp';
+import { useTranslation } from 'react-i18next';  // Import useTranslation hook
 import './Navbar.css';
 
-
 const NavBar = () => {
+  const { t } = useTranslation();  // Get t function for translations
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState({});
 
@@ -38,9 +39,9 @@ const NavBar = () => {
                 height="16"
                 aria-hidden="true"
               />
-              Call us +1 (786) 545-6534
+              {t('callUs')}
             </a>
-            <a href="#" className="cs-top-link">
+            <a href="/home" className="cs-top-link">
               <img
                 className="cs-link-icon"
                 src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/clock-stroke-white.svg"
@@ -49,7 +50,7 @@ const NavBar = () => {
                 height="20"
                 aria-hidden="true"
               />
-              Opening hours: Mon - Sat: 8:00am To 9:00pm
+              {t('openingHours')}
             </a>
           </div>
           <div className="cs-top-social">
@@ -63,7 +64,7 @@ const NavBar = () => {
                 aria-hidden="true"
               />
             </a>
-            <a href="https://www.instagram.com/diazhechevarria/?igsh=N3RoNGFqa2s5YmQ3#" className="cs-social-link" target='blank'>
+            <a href="https://www.facebook.com/profile.php?id=100038914455783" className="cs-social-link" target='blank'>
               <img
                 className="cs-social-icon"
                 src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-lgrey.svg"
@@ -104,7 +105,7 @@ const NavBar = () => {
               className="cs-ul"
               aria-expanded={isMenuOpen ? "true" : "false"}
             >
-              {["Home", "About", "Services", "Contact Us", "Our Work"].map(
+              {["Home", "About Us", "Services", "Contact Us", "Our Work"].map(
                 (item, index) => (
                   <li
                     key={index}
@@ -112,16 +113,16 @@ const NavBar = () => {
                       isDropdownOpen[index] ? "cs-active" : ""
                     }`}
                     onClick={() => {
-                      toggleDropdown(index)
+                      toggleDropdown(index);
                       handleLinkClick();
                     }}
                   >
-      <Link
-        to={`/${item.toLowerCase().replace(/\s+/g, '-')}`} // Generate the route dynamically
-        className="cs-li-link"
-      >
-        {item}
-      </Link>
+                    <Link
+                      to={`/${item.toLowerCase().replace(/\s+/g, '-')}`} // Dynamically generate route
+                      className="cs-li-link"
+                    >
+                      {t(item)} {/* Translate tab names */}
+                    </Link>
                   </li>
                 )
               )}
@@ -129,7 +130,7 @@ const NavBar = () => {
           </div>
         </nav>
         <a href="/BookAnAppointment" className="cs-button-solid cs-nav-button">
-         Book Online
+          {t('bookOnline')} {/* Translate the button */}
         </a>
       </div>
     </header>

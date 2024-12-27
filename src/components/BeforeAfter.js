@@ -5,9 +5,10 @@ import after1 from '../images/after1.webp';
 import before2 from '../images/before2.webp';
 import after2 from '../images/after2.webp';
 import before3 from '../images/before5.webp';
-import after3 from '../images/after5.webp';
 import before4 from '../images/before6.webp';
 import after4 from '../images/after6.webp';
+import after5 from '../images/after5.webp';
+
 
 
 const BeforeAfter = () => {
@@ -43,7 +44,7 @@ const BeforeAfter = () => {
           beforeSrc:
           before3,
           afterSrc:
-          after3,
+          after5,
         },
         {
           text: "Stair install ",

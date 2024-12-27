@@ -7,11 +7,11 @@ const ContentGroups = () => {
       <div className="cs-content">
         <div className="cs-flex-wrapper">
           <div className="cs-flex">
-            <span className="cs-topper">My Commitment</span>
+            <span className="cs-topper">Our Mission</span>
             <h2 className="cs-title">Your Pool, Always in Optimal Shape</h2>
           </div>
-          <a href="#" className="cs-button-solid">
-            Learn More About My Services
+          <a href="/about-us" className="cs-button-solid">
+            Learn More About Us
           </a>
         </div>
         <div className="cs-wrapper">

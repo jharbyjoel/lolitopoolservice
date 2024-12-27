@@ -6,7 +6,6 @@
 @media only screen and (min-width: 0rem) {
     #why-choose-441 {
         padding: var(--sectionPadding);
-        background-color: #ffffff;
     }
     #why-choose-441 .cs-container {
         width: 100%;
@@ -168,6 +167,7 @@
 @media only screen and (min-width: 48rem) {
     #why-choose-441 .cs-container {
         max-width: 80rem;
+        margin-top: -100px;
     }
     #why-choose-441 .cs-card-group {
         flex-direction: row;

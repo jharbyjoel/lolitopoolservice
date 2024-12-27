@@ -1,0 +1,291 @@
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #gallery-1086 {
+        padding: var(--sectionPadding);
+    }
+    #gallery-1086 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #gallery-1086 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #gallery-1086 .cs-title {
+        margin: 0;
+    }
+    #gallery-1086 .cs-image-group {
+        width: 100%;
+        /* changes to 1280px at large desktop */
+        max-width: 49rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(20, minmax(9vw, 1fr));
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #gallery-1086 .cs-picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+    }
+    #gallery-1086 .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #gallery-1086 .cs-picture1 {
+        grid-column: 1 / span 6;
+        grid-row: span 4;
+    }
+    #gallery-1086 .cs-picture2 {
+        grid-column: 7 / span 6;
+        grid-row: span 5;
+    }
+    #gallery-1086 .cs-picture3 {
+        grid-column: 1 / span 6;
+        grid-row: 5 / span 6;
+    }
+    #gallery-1086 .cs-picture4 {
+        grid-column: 7 / span 6;
+        grid-row: 6 / span 5;
+    }
+    #gallery-1086 .cs-picture5 {
+        grid-column: 1 / span 6;
+        grid-row: 11 / span 4;
+    }
+    #gallery-1086 .cs-picture6 {
+        grid-column: 7 / span 6;
+        grid-row: 11 / span 5;
+    }
+    #gallery-1086 .cs-picture7 {
+        grid-column: 1 / span 6;
+        grid-row: 15 / span 6;
+    }
+    #gallery-1086 .cs-picture8 {
+        grid-column: 7 / span 6;
+        grid-row: 16 / span 5;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #gallery-1086 .cs-image-group {
+        grid-template-rows: repeat(20, minmax(6rem, 1fr));
+    }
+}
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #gallery-1086 .cs-image-group {
+        max-width: 80rem;
+        height: 49.0625rem;
+        grid-template-rows: repeat(12, 1fr);
+    }
+    #gallery-1086 .cs-picture1 {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 7;
+    }
+    #gallery-1086 .cs-picture2 {
+        grid-column: 4 / span 3;
+        grid-row: 1 / span 10;
+    }
+    #gallery-1086 .cs-picture3 {
+        grid-column: 7 / span 3;
+        grid-row: 1 / span 5;
+    }
+    #gallery-1086 .cs-picture4 {
+        grid-column: 10 / span 3;
+        grid-row: 1 / span 7;
+    }
+    #gallery-1086 .cs-picture5 {
+        grid-column: 1 / span 3;
+        grid-row: 8 / span 13;
+    }
+    #gallery-1086 .cs-picture6 {
+        grid-column: 4 / span 3;
+        grid-row: 11 / span 10;
+    }
+    #gallery-1086 .cs-picture7 {
+        grid-column: 7 / span 3;
+        grid-row: 6 / span 15;
+    }
+    #gallery-1086 .cs-picture8 {
+        grid-column: 10 / span 3;
+        grid-row: 8 / span 13;
+    }
+}
+
+/*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #banner-1400 {
+        padding: var(--sectionPadding);
+        /* 190px - 268px */
+        padding-top: clamp(11.875rem, 25vw, 16.75rem);
+        padding-bottom: 6.25rem;
+        /* clips the line from causing overflow issues for going off screen */
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    #banner-1400 .cs-container {
+        text-align: center;
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        /* 8px - 12px */
+        gap: clamp(0.5rem, 1vw, 0.75rem);
+    }
+    #banner-1400 .cs-int-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+    }
+    #banner-1400 .cs-breadcrumbs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #banner-1400 .cs-link {
+        font-size: 1rem;
+        line-height: 1.2em;
+        text-decoration: none;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #banner-1400 .cs-link:last-of-type {
+        /* remove the chevron on the last list item */
+    }
+    #banner-1400 .cs-link:last-of-type::after {
+        display: none;
+    }
+    #banner-1400 .cs-link:after {
+        /* chevron */
+        content: "";
+        width: 0.4375rem;
+        height: 0.75rem;
+        margin: 0 1rem;
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/white-chev.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: block;
+    }
+    #banner-1400 .cs-link.cs-active {
+        color: var(--primary);
+    }
+    #banner-1400 .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    #banner-1400 .cs-background:before {
+        /* gradient overlay */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.4;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #banner-1400 .cs-background:after {
+        /* gradient overlay */
+        content: "";
+        width: 100%;
+        height: 40%;
+        background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#000000),
+            to(rgba(0, 0, 0, 0))
+        );
+        background: -o-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(
+            to bottom,
+            #000000 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    #banner-1400 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #banner-1400 .cs-background:before {
+        width: 50%;
+        height: 100%;
+        background: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from(#000000),
+            to(rgba(0, 0, 0, 0))
+        );
+        background: -o-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(
+            to right,
+            #000000 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        opacity: 1;
+    }
+}
+
+                                
+                                

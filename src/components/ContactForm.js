@@ -93,10 +93,8 @@ const ContactSection = () => {
             </div>
             <div className="cs-info">
               <span className="cs-topper">Working Hours</span>
-              <span className="cs-detail">Tuesday - Friday: 7:00 AM - 5:00 PM</span>
-              <span className="cs-detail">Saturday: Closed</span>
+              <span className="cs-detail">Monday - Saturday: 8:00 AM - 9:00 PM</span>
               <span className="cs-detail">Sunday: Closed</span>
-              <span className="cs-detail">Monday: Closed</span>
             </div>
             <div className="cs-info">
               <span className="cs-topper">Contact</span>
@@ -117,6 +115,7 @@ const ContactSection = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+             title="Map showing our location in Miami, FL"
           ></iframe>
   
           {/* Graphics */}

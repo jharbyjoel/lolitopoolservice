@@ -2,6 +2,7 @@ import React from 'react';
 import heroimage from '../images/heroimage.webp';
 import PoolService from '../images/servicespicture-min.webp';
 import './ServicesPage.css';
+
 const ServicesPage = () => {
   return (
     <div>
@@ -127,18 +128,36 @@ const ServicesPage = () => {
             <p>
               With over 10 years of experience in the pool service industry, we provide expert care and maintenance for all types of pools. We believe in treating every client with care and ensuring that their pool is in top condition.
             </p>
-            <h3>Pool Cleaning</h3>
-            <p>
-              We offer thorough pool cleaning services, including debris removal, vacuuming, and checking the filtration system. Your pool will be sparkling clean and ready for use after each service.
-            </p>
+
+            {/* Add New Services Here */}
             <h3>Pool Maintenance</h3>
             <p>
-              Regular maintenance is key to keeping your pool running smoothly. We provide equipment inspections, chemical testing, and balancing to ensure the health of your pool.
+              Our pool maintenance services include:
+              <ul>
+                <li>Brush</li>
+                <li>Vacuum</li>
+                <li>Filter cleaning</li>
+                <li>Basket cleaning</li>
+                <li>Chemicals adjustment</li>
+              </ul>
             </p>
-            <h3>Repairs and Upgrades</h3>
+
+            <h3>Pool Mechanic Services</h3>
             <p>
-              Whether it's fixing a pump, replacing tiles, or upgrading your pool's system, We can handle all necessary repairs and improvements with careful attention to detail.
+              We offer mechanical services such as:
+              <ul>
+                <li>Filter replacement</li>
+                <li>Motor replacement</li>
+                <li>Pump replacement</li>
+                <li>Other mechanical services</li>
+              </ul>
             </p>
+
+            <h3>Leak Detection and Repair</h3>
+            <p>
+              We specialize in detecting and repairing leaks in pools and their mechanisms to ensure your pool is running efficiently and without issue.
+            </p>
+
             <h4>Why Choose Our Services?</h4>
             <ul>
               <li>Over 10 years of experience in the pool service industry.</li>

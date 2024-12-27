@@ -1,129 +1,98 @@
-import React from "react";
-import heroimagemobile from '../images/heroimage-m.webp';
-import heroimage from '../images/heroimage.webp';
-import poolservice1 from '../images/poolservice1.webp';
-import poolservice2 from '../images/poolservice2.webp';
-import poolservice3 from '../images/poolservice3.webp';
-import poolservice4 from '../images/poolservice4.webp';
-import ContentGroups from './ContentGroups';
-import { ContactSectionFooter } from './Footer';
+import React, { useState, useRef } from "react";
 import './LandingPage.css';
-import Reviews from './Reviews';
-import WhyUs from './WhyUs';
+import LandingPageVideo from '../images/LandingPageBackground.mp4';
+import TypesOfServices from "./TypesOfServices";
+import ContentGroups from "./ContentGroups";
+import BeforeAfter from "./BeforeAfter";
+import WhyUs from "./WhyUs";
+import Reviews from "./Reviews";
+import ContactSection from "./ContactForm";
+import SaltAndClorine from "./SaltAndClorine";
+import { useTranslation } from "react-i18next";  // Import the useTranslation hook
 
 const LandingPage = () => {
+  const [isPlayButtonVisible, setPlayButtonVisible] = useState(true);
+  const videoRef = useRef(null);
+  const { t } = useTranslation();  // Get the t function for translations
+
+  const togglePlayButton = () => {
+    setPlayButtonVisible(!isPlayButtonVisible);
+  };
+
+  const toggleVideoPlayback = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+    togglePlayButton();
+  };
+
   return (
     <>
-      {/* Hero Section */}
-      <section id="hero-1957">
+      <section id="hero-2042">
         <div className="cs-container">
           <div className="cs-content">
-            <span className="cs-topper">Premium Care</span>
-            <h1 className="cs-title"> A Pool Service That You Can Trust</h1>
+          <span className="cs-topper">{t('companyName')}</span> {/* Use translated company name */}
+          <h1 className="cs-title">{t('heroTitle')}</h1> {/* Use translated title */}
             <p className="cs-text">
-              The Best Choice For Pool Care Year Round
+              {t('heroDescription')} {/* Use translated description */}
             </p>
-            <a href="" className="cs-button-solid">
-              Book Online
-            </a>
+            <div className="cs-button-group">
+              <a href="/contact-us" className="cs-button-solid">
+                {t('scheduleService')} {/* Translate button text */}
+              </a>
+            </div>
           </div>
+          {isPlayButtonVisible && (
+            <button
+              className="cs-play"
+              aria-label="click to play video"
+              onClick={toggleVideoPlayback}
+            >
+              <img
+                className="cs-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg"
+                alt="play icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </button>
+          )}
         </div>
-        {/* Background Image */}
-        <picture className="cs-background">
-          <source
-            media="(max-width: 800px)"
-            srcSet={heroimagemobile}
-          />
-          <source
-            media="(min-width: 601px)"
-            srcSet={heroimage}
-          />
-          <img
-            decoding="async"
-            src={heroimage}
-            alt="healthcare professionals"
-            width="1920"
-            height="746"
+
+        <div
+          className="cs-video-wrapper"
+          aria-label="video wrapper"
+          onClick={toggleVideoPlayback}
+          role="button"
+        >
+          <video
+            ref={videoRef}
+            loading="lazy"
+            src={LandingPageVideo}
+            muted
+            playsInline
+            autoPlay={true}
+            loop
+            className="cs-video"
+            onClick={(e) => e.stopPropagation()} // Prevent parent click handler from triggering
             aria-hidden="true"
           />
-        </picture>
-      </section>
-
-      {/* Services Section */}
-      <section id="services-1957">
-        <div className="cs-container">
-          <ul className="cs-card-group">
-            {/* Service Items */}
-            {[
-              {
-                title: "Weekly Pool Maintenance",
-                description: "Service Every Week",
-                image: poolservice1,
-              },
-              {
-                title: "Equipment Install",
-                description: "Built for Reliability and Peak Performance",
-                image: poolservice3,
-              },
-              {
-                title: "Add-Ons",
-                description: " Combining Safety, Style, and Functionality",
-                image: poolservice2,
-              },
-              {
-                title: "Acid and Pressure Wash",
-                description: "Revitalize, Renew, and Restore Its Sparkling Charm",
-                image: poolservice4,
-              },
-            ].map((service, index) => (
-              <li className="cs-item" key={index}>
-                <a href="" className="cs-link">
-                  <picture className="cs-icon-wrapper">
-                    <img
-                      className="cs-icon"
-                      loading="lazy"
-                      decoding="async"
-                      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-up-right-arrow.svg"
-                      alt="icon"
-                      width="32"
-                      height="32"
-                    />
-                  </picture>
-                  <div className="cs-flex">
-                    <span className="cs-topper">{service.title}</span>
-                    <h3 className="cs-h3">{service.description}</h3>
-                  </div>
-                </a>
-                <picture className="cs-item-background">
-                  <source
-                    media="(max-width: 600px)"
-                    srcSet={service.image}
-                  />
-                  <source
-                    media="(min-width: 601px)"
-                    srcSet={service.image}
-                  />
-                  <img
-                    decoding="async"
-                    src={service.image}
-                    alt="healthcare patient"
-                    width="455"
-                    height="337"
-                    aria-hidden="true"
-                  />
-                </picture>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
+
+      {/* Add the TypesOfServices component here */}
+      <TypesOfServices />
       <ContentGroups />
+      <SaltAndClorine />
+      <BeforeAfter />
       <WhyUs />
       <Reviews />
-      <ContactSectionFooter />
+      <ContactSection />
     </>
-
-    
   );
 };
 

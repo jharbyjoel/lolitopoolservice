@@ -1,6 +1,7 @@
 import emailjs from "emailjs-com";
 import React from 'react';
 import './Footer.css';
+import logo from '../images/Lolito.webp'
 
 const ContactSectionFooter = () => {
 
@@ -151,12 +152,12 @@ const Footer = () => {
     <footer id="footer-1392">
       <div className="cs-container">
         <div className="cs-top">
-          <a aria-label="go back to home" className="cs-logo" href="">
+          <a aria-label="go back to home" className="cs-logo" href="/home">
             <img
               className="cs-logo-img"
               loading="lazy"
               decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/agency-logo.svg"
+              src={logo}
               alt="logo"
               width="209"
               height="40"
@@ -164,23 +165,23 @@ const Footer = () => {
           </a>
           <ul className="cs-ul">
             <li className="cs-li">
-              <a href="" className="cs-link">Home</a>
+              <a href="/home" className="cs-link">Home</a>
             </li>
             <li className="cs-li">
-              <a href="" className="cs-link">About</a>
+              <a href="/about" className="cs-link">About</a>
             </li>
             <li className="cs-li">
-              <a href="" className="cs-link">Services</a>
+              <a href="/services" className="cs-link">Services</a>
             </li>
             <li className="cs-li">
-              <a href="" className="cs-link">Contact</a>
+              <a href="/contact-us" className="cs-link">Contact</a>
             </li>
           </ul>
         </div>
         <div className="cs-bottom">
           <ul className="cs-social">
             <li className="cs-social-li">
-              <a href="" className="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
+              <a href="https://www.facebook.com/profile.php?id=100038914455783" className="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
                 <img
                   className="cs-social-icon cs-default"
                   src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/face-white1.svg"
@@ -194,21 +195,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="cs-social-li">
-              <a href="" className="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
-                <img
-                  className="cs-social-icon cs-default"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-white.svg"
-                  alt="icon"
-                  loading="lazy"
-                  decoding="async"
-                  width="12"
-                  height="12"
-                  aria-hidden="true"
-                />
-              </a>
-            </li>
-            <li className="cs-social-li">
-              <a href="" className="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
+              <a href="https://www.facebook.com/profile.php?id=100038914455783" className="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
                 <img
                   className="cs-social-icon cs-default"
                   src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram.svg"
@@ -221,23 +208,9 @@ const Footer = () => {
                 />
               </a>
             </li>
-            <li className="cs-social-li">
-              <a href="" className="cs-social-link" aria-label="youtube" target="_blank" rel="noopener">
-                <img
-                  className="cs-social-icon cs-default"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube.svg"
-                  alt="icon"
-                  loading="lazy"
-                  decoding="async"
-                  width="12"
-                  height="12"
-                  aria-hidden="true"
-                />
-              </a>
-            </li>
           </ul>
           <span className="cs-copyright">
-            © Copyright 2024 - <a href="" className="cs-copyright-link">Grey Maverick Web Designs</a>
+            © Copyright 2024 - <a href="/home" className="cs-copyright-link">Grey Maverick Web Designs</a>
           </span>
           <div className="cs-flex">
 
