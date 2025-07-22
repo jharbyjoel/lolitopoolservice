@@ -31,7 +31,7 @@ html {
     transition: background-color 0.3s;
   }
   #cs-navigation:before {
-    content: "";
+    content: '';
     width: 100%;
     height: 0vh;
     background: rgba(0, 0, 0, 0.6);
@@ -125,21 +125,21 @@ html {
   }
   #cs-navigation .cs-logo {
     width: 9.1875rem;
-    height: auto;
+    height: 6rem; /* constrain to navbar height */
     margin: 0 auto 0 0;
-    /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
+    overflow: visible; /* allow logo to overflow navbar */
   }
   #cs-navigation .cs-logo img {
-    width: 100%;
-    height: 100%;
-    /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+    width: 150%; /* make logo image larger than container */
+    height: 150%;
     object-fit: contain;
+    display: block;
   }
   #cs-navigation .cs-toggle {
     width: 3.5rem;
@@ -398,20 +398,20 @@ html {
   #cs-navigation .cs-logo {
     width: 18.4%;
     max-width: 12.3125rem;
-    height: 3.75rem;
-    /* margin-right auto pushes everything away from it to the right */
+    height: 6rem; /* constrain to navbar height */
     margin: 0 auto 0 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
+    overflow: visible; /* allow logo to overflow navbar */
   }
   #cs-navigation .cs-logo img {
-    width: 100%;
-    height: 100%;
-    /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+    width: 150%; /* make logo image larger than container */
+    height: 150%;
     object-fit: contain;
+    display: block;
   }
   #cs-navigation .cs-ul-wrapper {
     /* absolutely positioned to be dead center */
@@ -448,7 +448,7 @@ html {
     transition: color 0.3s;
   }
   #cs-navigation .cs-li-link:before {
-    content: "";
+    content: '';
     width: 0%;
     height: 1px;
     background: currentColor;
@@ -491,7 +491,7 @@ html {
     transition: color 0.3s;
   }
   #cs-navigation .cs-button-solid:before {
-    content: "";
+    content: '';
     width: 0%;
     height: 100%;
     background: #fff;
@@ -512,4 +512,3 @@ html {
     line-height: 2.875rem;
   }
 }
-                                
