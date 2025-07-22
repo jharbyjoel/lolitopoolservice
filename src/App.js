@@ -20,22 +20,21 @@ function App() {
   return (
     <Router>
       <>
-      
         <NavBar />
-        {/* Language switch buttons */}
+        {/* Language switch buttons
         <div className="language-buttons">
           <button onClick={() => changeLanguage('en')}>English</button>
           <button onClick={() => changeLanguage('es')}>Español</button>
-        </div>
+        </div> */}
 
         <Routes>
-          <Route path="/" element={<LandingPage />} /> {/* Home page */}
-          <Route path="/home" element={<LandingPage />} />
-          <Route path="/about-us" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/BookAnAppointment" element={<Appointment />} />
-          <Route path="/contact-us" element={<Appointment />} />
-          <Route path="/our-work" element={<OurWork />} />
+          <Route path='/' element={<LandingPage />} /> {/* Home page */}
+          <Route path='/home' element={<LandingPage />} />
+          <Route path='/about-us' element={<AboutPage />} />
+          <Route path='/services' element={<ServicesPage />} />
+          <Route path='/BookAnAppointment' element={<Appointment />} />
+          <Route path='/contact-us' element={<Appointment />} />
+          <Route path='/our-work' element={<OurWork />} />
         </Routes>
 
         <Footer />
